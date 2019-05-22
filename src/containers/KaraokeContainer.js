@@ -16,7 +16,9 @@ class KaraokeContainer extends Component {
       songLyrics: {
         id: props.id,
         title: props.title,
-        lyrics: props.lyrics
+        lyrics: props.lyrics,
+        likes: props.likes,
+        dislikes: props.dislikes,
       }
     })
     
@@ -49,13 +51,13 @@ filterBySong = (filter) => {
   return song
 }
 
-votebarUp =  (props) => {
+votebarUp =  (id,likes) => {
 
-  this.props.changeLikes(props, "like")
+  this.props.changeLikes(id,likes, "like")
 }
-votebarDown =  (props) => {
+votebarDown =  (id,dislikes) => {
  
-  this.props.changeLikes(props, "dislike")
+  this.props.changeLikes(id,dislikes, "dislike")
 }
 
 

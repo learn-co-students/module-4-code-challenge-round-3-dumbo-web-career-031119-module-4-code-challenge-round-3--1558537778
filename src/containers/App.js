@@ -33,8 +33,21 @@ const newSongs = this.state.songs.map(song=> {
 })
 }
 
-changeLikes = (id,way) => {
-	console.log("Change",id,"in this direction", way)
+changeLikes = (id,likes,way) => {
+	console.log("Change",id,"in this direction", way,"current",likes)
+
+	// fetch(`http://localhost:4000/users/1/songs/${id}/like`,
+ //    {
+ //        method: 'PATCH',
+ //        headers: {
+ //            'Content-Type': 'application/json',
+ //            Accept: 'application/json'
+ //        },
+
+ //        body: JSON.stringify({'likes': newLikes})
+ //    }).then((res) => {
+ //        return res.json();
+ //    })
 }
 
   render() {
