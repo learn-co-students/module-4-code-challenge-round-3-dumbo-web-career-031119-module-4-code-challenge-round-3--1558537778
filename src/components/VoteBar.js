@@ -6,17 +6,17 @@ const VoteBar = ({ upTitle, voteUp, downTitle, voteDown }) => {
       <button
         className="pure-button up-button"
         onClick={voteUp}
-      >
+      > Like
         {upTitle}
       </button>
       <button
         className="pure-button down-button"
         onClick={voteDown}
-      >
+      > Dislike
         {downTitle}
       </button>
     </div>
-  )
-}
+  );
+};
 
 export default VoteBar;
