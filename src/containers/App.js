@@ -16,13 +16,30 @@ componentDidMount(){
 	 })
 	)
 }
+
+changePlays = (id) => {
+const newSongs = this.state.songs.map(song=> {
+	if (song.id === id) {
+		const copySong = {...song}
+		console.log(copySong.plays)
+		copySong.plays += 1
+		return copySong
+	} else {
+		return song
+	} 
+})
+ this.setState({
+	songs:newSongs
+})
+}
+
   render() {
   	const {songs} = this.state
   
     return (
       <div className="app">
         <Header />
-        <KaraokeContainer songs={songs}/>
+        <KaraokeContainer changePlays={this.changePlays}songs={songs}/>
       </div>
     );
   }

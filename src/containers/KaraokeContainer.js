@@ -17,7 +17,21 @@ class KaraokeContainer extends Component {
         lyrics: props.lyrics
       }
     })
-  }
+    
+    let newPlay = (props.plays + 1)
+    fetch(`http://localhost:4000/users/1/songs/${props.id}/play`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+        },
+
+        body: JSON.stringify({'plays': newPlay})
+    }).then((res) => {
+        return res.json();
+    })
+   this.props.changePlays(props.id)
+}
 
   filterChange = (e) => {
       this.setState({
