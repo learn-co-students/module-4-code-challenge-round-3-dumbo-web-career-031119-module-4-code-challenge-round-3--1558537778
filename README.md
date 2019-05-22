@@ -78,12 +78,12 @@ Let's get a bare minimum karaoke machine working. This is your end goal:
 
 ![result](react-karaoke-challenge-milestone-1.gif)
 
-- [ ] Display a list of songs with their artist in the left sidebar.
-- [ ] The list of songs will come from `http://localhost:4000`.
-- [ ] Clicking the `Play` button, located next to each song, will load the song in the right panel.
-- [ ] The right panel will display the song's title and lyrics.
-- [ ] The song's lyrics should be passed into the `Lyrics` component. You should not be editing this file.
-- [ ] When typing into the input, the list of songs should filter by song name.
+- [x] Display a list of songs with their artist in the left sidebar.
+- [x] The list of songs will come from `http://localhost:4000`.
+- [x] Clicking the `Play` button, located next to each song, will load the song in the right panel.
+- [x] The right panel will display the song's title and lyrics.
+- [x] The song's lyrics should be passed into the `Lyrics` component. You should not be editing this file.
+- [x] When typing into the input, the list of songs should filter by song name.
 
 ---
 
@@ -92,11 +92,11 @@ Let's get a bare minimum karaoke machine working. This is your end goal:
 Being the React master that you are, you noticed some extra data and capabilities in the API: `plays`, `likes`, and `dislikes`. So you decided to add some flair to the karaoke machine ;)
 
 - _Tracking Plays_
-  - [ ] The song list should display a new column with the number of times a song was played.
-  - [ ] This data, number of plays, will come from the API. Every time a song is played (clicking `Play`), a `PATCH` should be sent to the database to increment this value for that song.
-  - [ ] If that song is already playing, you should not `PATCH`.
+  - [x] The song list should display a new column with the number of times a song was played.
+  - [x] This data, number of plays, will come from the API. Every time a song is played (clicking `Play`), a `PATCH` should be sent to the database to increment this value for that song.
+  - [x] If that song is already playing, you should not `PATCH`.
 - _Likes & Dislikes_
-  - [ ] The song list should display two new columns showing the likes/dislikes of a song.
+  - [x] The song list should display two new columns showing the likes/dislikes of a song.
   - [ ] Refactor and add buttons for liking and disliking the currently playing song above the playing song. A pre-styled component has been provided for you to use: `VoteBar`
   - [ ] The `VoteBar` should be conditionally rendered. It should not appear when a song is not playing.
   - [ ] Clicking like/dislike should send a `PATCH` to the database to increment this value for that song.
