@@ -1,11 +1,13 @@
 import React from 'react';
 import Lyrics from './Lyrics';
-
-const KaraokeDisplay = () => {
+import VoteBar from './VoteBar';
+const KaraokeDisplay = (props) => {
+  // console.log(props.object.likes)
   return (
     <div className="karaoke-display">
-      <h2>Song Title</h2>
-      <Lyrics lyrics="example song lyrics" />
+      {props.playing ? <VoteBar object={props.object} handleDislikeIncrement={props.handleDislikeIncrement} handleLikeIncrement={props.handleLikeIncrement} upTitle={props.object.likes}/> : null}
+      <h2>{props.title}</h2>
+      <Lyrics lyrics={props.lyrics} />
     </div>
   )
 }
