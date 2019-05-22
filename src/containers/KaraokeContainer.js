@@ -11,7 +11,8 @@ class KaraokeContainer extends Component {
   }
 
   onPlay = (props) => {
-    this.setState({
+   if(this.state.songLyrics.title != props.title) {
+       this.setState({
       songLyrics: {
         title: props.title,
         lyrics: props.lyrics
@@ -31,6 +32,8 @@ class KaraokeContainer extends Component {
         return res.json();
     })
    this.props.changePlays(props.id)
+   }
+ 
 }
 
   filterChange = (e) => {
