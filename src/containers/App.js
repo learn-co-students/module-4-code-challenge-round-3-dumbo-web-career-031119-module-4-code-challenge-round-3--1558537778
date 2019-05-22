@@ -33,13 +33,17 @@ const newSongs = this.state.songs.map(song=> {
 })
 }
 
+changeLikes = (id,way) => {
+	console.log("Change",id,"in this direction", way)
+}
+
   render() {
   	const {songs} = this.state
   
     return (
       <div className="app">
         <Header />
-        <KaraokeContainer changePlays={this.changePlays}songs={songs}/>
+        <KaraokeContainer changeLikes={this.changeLikes}changePlays={this.changePlays}songs={songs}/>
       </div>
     );
   }

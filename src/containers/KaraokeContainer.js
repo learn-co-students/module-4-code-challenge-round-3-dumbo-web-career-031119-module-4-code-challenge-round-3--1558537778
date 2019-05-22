@@ -14,6 +14,7 @@ class KaraokeContainer extends Component {
    if(this.state.songLyrics.title != props.title) {
        this.setState({
       songLyrics: {
+        id: props.id,
         title: props.title,
         lyrics: props.lyrics
       }
@@ -48,6 +49,15 @@ filterBySong = (filter) => {
   return song
 }
 
+votebarUp =  (props) => {
+
+  this.props.changeLikes(props, "like")
+}
+votebarDown =  (props) => {
+ 
+  this.props.changeLikes(props, "dislike")
+}
+
 
   render() {
     const { songs } = this.props
@@ -58,7 +68,7 @@ filterBySong = (filter) => {
           <Filter filterChange={this.filterChange}filterValue={filter}/>
           <SongList onPlay={this.onPlay}songs={this.filterBySong(filter)}/>
         </div>
-        <KaraokeDisplay songLyrics={songLyrics}/>
+        <KaraokeDisplay votebarDown={this.votebarDown}votebarUp={this.votebarUp}songLyrics={songLyrics}/>
       </div>
     );
   }
