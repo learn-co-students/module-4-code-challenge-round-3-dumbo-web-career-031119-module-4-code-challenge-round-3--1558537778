@@ -6,11 +6,12 @@ import songs from '../data/songs';
 
 class KaraokeContainer extends Component {
   render() {
+    const { songs } = this.props
     return (
       <div className="karaoke-container">
         <div className="sidebar">
           <Filter />
-          <SongList />
+          <SongList songs={songs}/>
         </div>
         <KaraokeDisplay />
       </div>
