@@ -18,7 +18,7 @@ componentDidMount(){
 }
   render() {
   	const {songs} = this.state
-  	console.log(this.state.songs)
+  
     return (
       <div className="app">
         <Header />
