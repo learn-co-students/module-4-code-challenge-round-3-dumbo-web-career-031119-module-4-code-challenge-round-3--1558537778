@@ -7,9 +7,11 @@ const SongList = (props) => {
         <tr>
           <th>Title</th>
           <th>Singer</th>
-
+          <th>Plays</th>
+          <th>Likes</th>
+          <th>Dislikes</th>
           <th>▶</th>
-          <th>No of Plays</th>
+
         </tr>
 
         {props.songs.map(song=> <Song key={song.id}onPlay={props.onPlay} {...song} />)}
